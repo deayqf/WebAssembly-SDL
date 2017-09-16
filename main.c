@@ -34,7 +34,7 @@ void loop()
 
 int main( int argc, char* args[] )
 {
-    printf( "BOOP\n" );
+    printf( "SDL running through Emscripten\n" );
 
     SDL_Init( SDL_INIT_VIDEO );
     graphicsInit( &gfx );
