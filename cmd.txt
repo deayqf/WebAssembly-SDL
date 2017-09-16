@@ -1,0 +1,1 @@
+-O2 --js-opts 0 -g4 test.c -I/home/deayqf/SDL-emscripten/include -I/home/deayqf/SDL-emscripten/build/.libs/libSDL2.a -o index.html
