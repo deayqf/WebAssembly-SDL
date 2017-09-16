@@ -10,10 +10,12 @@ static const int SCREEN_W = 700;
 static const int SCREEN_H = 700;
 
 #include "direction.h"
+#include "target.h"
 #include "player.h"
 #include "graphics.h"
 
 Graphics gfx;
+Target trgt;
 Player plyr;
 
 void loop()
@@ -28,7 +30,7 @@ void loop()
     }
     
     playerMovement( &plyr );
-    graphicsDraw( &gfx, &plyr );
+    graphicsDraw( &gfx, &plyr, &trgt );
     SDL_Flip( gfx.surface );
 }
 
@@ -38,6 +40,7 @@ int main( int argc, char* args[] )
 
     SDL_Init( SDL_INIT_VIDEO );
     graphicsInit( &gfx );
+    targetInit( &trgt );
     playerInit( &plyr );
 
     #ifdef EMSCRIPTEN
