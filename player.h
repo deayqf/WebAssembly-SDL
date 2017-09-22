@@ -58,6 +58,10 @@ void playerMovement( Player* plyr )
             plyr->x_speed = 0;
             plyr->y_speed = -5;
             break;
+        case STOP:
+            plyr->x_speed = 0;
+            plyr->y_speed = 0;
+            break;
     }
 
     plyr->body.x += plyr->x_speed;

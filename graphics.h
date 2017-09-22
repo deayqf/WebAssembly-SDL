@@ -36,6 +36,7 @@ void graphicsDraw( Graphics* gfx, Player* plyr, Target* trgt )
     SDL_FillRect( gfx->surface, &trgt->outter, SDL_MapRGB( gfx->surface->format, trgt->color.r, trgt->color.g, trgt->color.b ) );
     SDL_FillRect( gfx->surface, &trgt->fill, SDL_MapRGB( gfx->surface->format, 0x00, 0x00, 0x00 ) );
     SDL_FillRect( gfx->surface, &trgt->goal, SDL_MapRGB( gfx->surface->format, trgt->color.r, trgt->color.g, trgt->color.b ) );
+    SDL_FillRect( gfx->surface, &trgt->inner, SDL_MapRGB( gfx->surface->format, 0x00, 0x00, 0x00 ) );
     
     SDL_FillRect( gfx->surface, &plyr->body, SDL_MapRGB( gfx->surface->format, plyr->color.r, plyr->color.g, plyr->color.b ) );
 }

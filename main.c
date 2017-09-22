@@ -10,8 +10,8 @@ static const int SCREEN_W = 700;
 static const int SCREEN_H = 700;
 
 #include "direction.h"
-#include "target.h"
 #include "player.h"
+#include "target.h"
 #include "graphics.h"
 
 Graphics gfx;
@@ -26,6 +26,20 @@ void loop()
         if( e.type == SDL_QUIT )
         {
             running = FALSE;
+        }
+        else if( e.type == SDL_KEYDOWN )
+        {
+            if( e.key.keysym.sym == SDLK_SPACE )
+            {
+                if( targetCheck( &trgt, &plyr ) == TRUE )
+                {
+                    printf( "True\n" );
+                }
+                else
+                {
+                    printf( "False\n" );
+                }
+            }
         }
     }
     
